@@ -83,49 +83,49 @@ public class Wkey extends SampleMecanumDrive{
         drive.setPoseEstimate(startPose);
 
         Trajectory begging = drive.trajectoryBuilder(startPose)
-                .forward(4)
+                .forward(48)
                 .build();
 
         Trajectory next1 = drive.trajectoryBuilder(begging.end())
-                .forward(2)
-                .strafeLeft(2)
+                .forward(24)
+                .strafeLeft(24)
                 .build();
 
         Trajectory next2 = drive.trajectoryBuilder(next1.end())
-                .strafeLeft(2)
+                .strafeLeft(24)
                 .build();
 
         Trajectory next3 = drive.trajectoryBuilder(next2.end(), Math.toRadians(270))
-                .forward(4)
+                .forward(48)
                 .build();
 
         Trajectory next4 = drive.trajectoryBuilder(next3.end())
-                .forward(6)
+                .forward(72)
                 .build();
 
         Trajectory next5 = drive.trajectoryBuilder(next4.end(), Math.toRadians(180))
-                .forward(2)
+                .forward(24)
                 .build();
 
         Trajectory next6 = drive.trajectoryBuilder(next5.end(), Math.toRadians(180))
-                .forward(2)
+                .forward(24)
                 .build();
 
 
         Trajectory next7 = drive.trajectoryBuilder(next6.end(), Math.toRadians(180))
-                .forward(4)
+                .forward(48)
                 .build();
 
         Trajectory next8 = drive.trajectoryBuilder(next7.end())
-                .strafeLeft(2)
+                .strafeLeft(24)
                 .build();
 
         Trajectory next9 = drive.trajectoryBuilder(next8.end())
-                .strafeRight(2)
+                .strafeRight(24)
                 .build();
 
         Trajectory finish = drive.trajectoryBuilder(next9.end())
-                .forward(6)
+                .forward(72)
                 .build();
 
         waitForStart();
